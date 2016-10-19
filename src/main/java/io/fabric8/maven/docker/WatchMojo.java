@@ -35,8 +35,6 @@ import io.fabric8.maven.docker.util.MojoParameters;
 import io.fabric8.maven.docker.util.StartOrderResolver;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
-import org.apache.maven.plugins.annotations.Execute;
-import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
 import org.codehaus.plexus.util.StringUtils;
@@ -56,7 +54,6 @@ import org.codehaus.plexus.util.StringUtils;
  * @since 16/06/15
  */
 @Mojo(name = "watch")
-@Execute(phase = LifecyclePhase.INITIALIZE)
 public class WatchMojo extends AbstractBuildSupportMojo {
 
     /**

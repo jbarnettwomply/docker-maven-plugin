@@ -28,7 +28,9 @@ import io.fabric8.maven.docker.service.ServiceHub;
 import io.fabric8.maven.docker.util.*;
 import org.apache.commons.lang3.text.StrSubstitutor;
 import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.plugins.annotations.*;
+import org.apache.maven.plugins.annotations.LifecyclePhase;
+import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Parameter;
 import org.codehaus.plexus.util.StringUtils;
 
 
@@ -38,7 +40,6 @@ import org.codehaus.plexus.util.StringUtils;
  * @author roland
  */
 @Mojo(name = "start", defaultPhase = LifecyclePhase.PRE_INTEGRATION_TEST)
-@Execute(phase = LifecyclePhase.INITIALIZE)
 public class StartMojo extends AbstractDockerMojo {
 
     @Parameter(property = "docker.showLogs")
